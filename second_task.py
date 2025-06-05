@@ -14,4 +14,4 @@ def get_number_ticket(min:int, max:int, quantity:int):
         
         
 
-print(get_number_ticket(1,100, 6))
+print("Ваші лотерейні числа:", get_number_ticket(1,100, 6))
