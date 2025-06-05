@@ -8,6 +8,7 @@ def get_number_ticket(min:int, max:int, quantity:int):
     else:
         numbers = list(range(min, max))
         number_list = random.sample(numbers, quantity)
+        number_list.sort()
         return number_list
     
         
