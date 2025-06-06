@@ -1,17 +1,20 @@
 import random
 
-def get_number_ticket(min:int, max:int, quantity:int):
-    if quantity > (max - min):
-        return("Вибачте, помилка, кількість номерів більше за заданий діапазон")
-    elif max < min:
-        return("Вибачте, помилка, Ваше максимальне значення менше за мінімільне")
-    else:
-        numbers = list(range(min, max))
-        number_list = random.sample(numbers, quantity)
-        number_list.sort()
-        return number_list
+def get_numbers_ticket(min:int, max:int, quantity:int):
+    try:
+        if min < 1:
+            return ""
+        elif max > 1000:
+            return ""
+        else:
+            numbers = list(range(min, max))
+            number_list = random.sample(numbers, quantity)
+            number_list.sort()
+            return number_list
+    except:
+        return ""
     
         
         
 
-print("Ваші лотерейні числа:", get_number_ticket(1,100, 6))
+print("Ваші лотерейні числа:", get_numbers_ticket(1000,1200, 10))
