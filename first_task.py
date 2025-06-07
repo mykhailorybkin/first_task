@@ -8,7 +8,7 @@ def get_days_from_today(some_date):
     difference = date_now - python_format_date
     return difference.days
 
-some_date = "2026.10.10"
+some_date = "2026-10-10"
 
 
 print(get_days_from_today(some_date), "days")
